@@ -1,3 +1,16 @@
 <div>
     <h1>Beer</h1>
+
+    {{#each this.beersArr}}
+
+    <div>
+        <h4> {{this.name}}</h4>
+
+        <img src="{{this.image_url}}" alt="cerveza" height="200px">
+        <p>{{this.description}}</p>
+        <p>{{this.tagline}}</p>
+
+    </div>
+    {{/each}}
+
 </div>

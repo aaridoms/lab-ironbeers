@@ -24,7 +24,27 @@ app.get('/', (req, res) => {
 });
 
 app.get('/beers', (req, res, next) => {
-  res.render('beers.hbs')
+   let beersArr =[]
+  punkAPI.getBeers()
+ 
+  .then ((response) => {
+    for (let i = 0; i<25; i++) {
+    beersArr.push(response[i])
+
+    }
+
+     res.render('beers.hbs', {
+      beersArr: beersArr,
+     })
+    console.log(response)
+    console.log(beersArr)
+
+  })
+.catch((error) => {
+  console.log(error)
+})
+
+ 
 })
 
 app.get('/random-beer', (req, res, next) => {
@@ -34,5 +54,7 @@ app.get('/random-beer', (req, res, next) => {
 app.get('*', (req, res, next) => {
   res.send("error, pagina no encontrada")
 })
+
+
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
