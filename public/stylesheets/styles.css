@@ -7,7 +7,8 @@ font-family: Arial, Helvetica, sans-serif;
 */
 
 body {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #bfbfbf;
 }
 
 nav {
@@ -16,6 +17,10 @@ nav {
     display: flex;
     align-items: center;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    cursor: pointer;
 }
 
 nav button {
@@ -32,7 +37,8 @@ nav button {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     border-color: #2081c3;
-    height: 35px;
+    height: 55px;
+    font-size: 20px;
 }
 
 .divIndex {
@@ -44,5 +50,35 @@ nav button {
     margin-top: 50px;
 }
 .imgHome{
-    width: 250px;
+    width: 500px;
+}
+
+.randomBeerDiv {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+.divImageRandom {
+    display: flex;
+    margin-right: 50px;
+
+}
+
+.beerContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.beerCard {
+    width: 500px;
+    margin: 0px 55px 50px 0px;
+}
+
+.beerCardImg {
+    display: flex;
+    justify-content: center;
 }
